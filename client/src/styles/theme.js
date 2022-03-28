@@ -8,7 +8,7 @@ const theme = createTheme({
         allVariants: {
             color: '#22222C',
         },
-    },
+       },
     palette: {
         primary: {
             main: '#22222C',
@@ -19,6 +19,7 @@ const theme = createTheme({
             yellow: '#FFE082',
             black: '#39353C',
             grey: grey[800],
+            blue: '#90CAF9',
             darkGrey: grey[900],
             greyTransparent: 'rgbs(34, 34, 44, 0.64)',
         },
