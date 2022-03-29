@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system';
@@ -22,12 +22,10 @@ const StyledButton = styled(Button)(({ theme }) => ({
     }
 }))
 
-const PricingPlan = ({ title, price, oldPrice, newPrice, frequency, id, ...rest }) => {
-    const [selected, setSelected] = useState();
+const PricingPlan = ({ title, price, oldPrice, newPrice, frequency, id, selected, ...rest }) => {
 
     return (
-        <StyledButton key={id} {...rest} onClick={() => setSelected(!selected)}
-        >
+        <StyledButton key={id} {...rest}>
             <Box component="div"
                 sx={{ fontWeight: 600, fontSize: '20px', letterSpacing: '-0.4px' }}>
                 {title}
@@ -44,14 +42,17 @@ const PricingPlan = ({ title, price, oldPrice, newPrice, frequency, id, ...rest 
             </Box>
             <Box component="div"
                 sx={{ fontWeight: 400 }}>
-                <Box component="span"
-                    sx={{ textDecoration: 'line-through', marginRight: '4px' }}>
-                    {oldPrice}
-                </Box>
-                <Box component="span"
-                    sx={{ fontWeight: 700, color: 'info.main', marginRight: '4px' }}>
-                    {newPrice}
-                </Box>
+                {oldPrice ? <>
+                    <Box component="span"
+                        sx={{ textDecoration: 'line-through', marginRight: '4px' }}>
+                        {oldPrice}
+                    </Box>
+                    <Box component="span"
+                        sx={{ fontWeight: 700, color: 'info.main', marginRight: '4px' }}>
+                        {newPrice}
+                    </Box>
+                </>
+                    : null}
                 {frequency}
             </Box>
             <IconButton
