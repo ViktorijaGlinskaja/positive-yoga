@@ -5,10 +5,15 @@ import { grey } from '@mui/material/colors';
 
 const theme = createTheme({
     typography: {
+        fontFamily: [
+            '-apple-system',
+            'BlinkMacSystemFont',
+            'sans-serif',
+          ].join(','),
         allVariants: {
             color: '#22222C',
         },
-       },
+    },
     palette: {
         primary: {
             main: '#22222C',
@@ -28,6 +33,11 @@ const theme = createTheme({
             secondary: '#FFE082',
         },
     },
+    mixins: {
+        toolbar: {
+            height: '56px',
+        }
+    }
 });
 
 export default responsiveFontSizes(theme);
