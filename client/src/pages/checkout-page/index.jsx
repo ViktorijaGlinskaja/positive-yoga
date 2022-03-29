@@ -2,6 +2,8 @@ import React from 'react'
 import LogoBar from '../../components/logo-bar'
 import StickyDiscount from '../../components/sticky-discount'
 import CheckoutPageHero from './ckeckout-page-hero'
+import ReviewSection from './checkout-page-review-section'
+import ActionSection from './checkout-page-action-section'
 
 const CheckoutPage = () => {
     return (
@@ -11,6 +13,8 @@ const CheckoutPage = () => {
             </StickyDiscount >
             <LogoBar />
             <CheckoutPageHero />
+            <ReviewSection />
+            <ActionSection />
         </>
     )
 }
