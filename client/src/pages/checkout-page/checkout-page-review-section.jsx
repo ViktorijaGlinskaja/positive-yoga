@@ -22,8 +22,8 @@ const ReviewSection = () => {
             </Typography>
             <Carousel sx={{ minHeight: '607px' }}>
                 {
-                    reviews.map((person) =>
-                        <Paper sx={{ width: '319px', height: '607px', borderRadius: '16px', padding: '16px', boxShadow: '0px 16px 32px rgba(57, 53, 60, 0.08)', alignSelf: 'stretch', margin: 'auto' }}>
+                    reviews.map((person, index) =>
+                        <Paper key={index} sx={{ width: '319px', height: '607px', borderRadius: '16px', padding: '16px', boxShadow: '0px 16px 32px rgba(57, 53, 60, 0.08)', alignSelf: 'stretch', margin: 'auto' }}>
                             <p style={{ fontSize: '15px', fontWeight: 600, margin: 0 }}>{person.name}</p>
                             <p style={{ opacity: '0.64', fontSize: '12px', margin: 0 }}>{person.city}</p>
                             <div style={{ margin: '16px 0px' }}>{person.rating}</div>
