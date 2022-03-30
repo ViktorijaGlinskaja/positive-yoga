@@ -30,9 +30,6 @@ const ActionSection = () => {
                         <div style={{ fontSize: '14px', marginLeft: '16px' }}>{point}</div>
                     </div>)}
             </Box>
-            <StyledTypography>
-                Start your yoga journey now!
-            </StyledTypography>
         </Box>
     )
 };
