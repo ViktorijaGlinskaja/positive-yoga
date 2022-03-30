@@ -11,8 +11,8 @@ const StyledButton = styled(Button)(({ theme }) => ({
     flexDirection: 'column',
     alignItems: 'flex-start',
     textTransform: 'none',
-    border: '2px solid rgba(0, 0, 0, 0.08)',
     fontWeight: 600,
+    border: '2px solid rgba(0, 0, 0, 0.08)',
     height: '120px',
     minWidth: '343px',
     borderRadius: '16px',
@@ -20,7 +20,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
     '&: focus': {
         border: `2px solid ${theme.palette.info.main}`,
     }
-}))
+}));
 
 const PricingPlan = ({ title, price, oldPrice, newPrice, frequency, id, selected, ...rest }) => {
 

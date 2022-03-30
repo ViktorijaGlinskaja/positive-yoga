@@ -1,7 +1,7 @@
-import React from 'react'
-import { Box, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import React from 'react';
+import { Box, Typography } from '@mui/material';
 import OrangeButton from '../../components/button';
+import FaqAccordion from '../../components/accordion';
 
 const Faq = () => {
     const questions = [
@@ -12,35 +12,24 @@ const Faq = () => {
     ]
     return (
         <>
-            <Box sx={{ textAlign: 'center', alignItems: 'stretch', color: 'secondary.black' }}>
-                <Typography sx={{ margin: '24px 0px', fontSize: '20px', fontWeight: 700 }}>
+            <Box sx={{ color: 'secondary.black' }}>
+                <Typography sx={{ margin: '16px 24px', fontSize: '20px', fontWeight: 700 }}>
                     Frequently Asked Questions
                 </Typography>
             </Box>
             <Box sx={{ display: 'grid', margin: '0px 24px' }}>
-                {questions.map((question, index) =>
-                    <Accordion key={question.index}>
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                        >
-                            <Typography sx={{ fontSize: '15px', fontWeight: 600, color: 'secondary.darkGrey' }}>{question.title}</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography sx={{ color: 'secondary.darkGrey', fontSize: '14px', fontWeight: 400 }}>
-                                {question.answer}
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
+                {questions.map((question) =>
+                    <FaqAccordion key={question.index} title={question.title} answer={question.answer} />
                 )}
                 <Box sx={{ margin: ' 40px 0px' }}>
                     <OrangeButton> Get my plan</OrangeButton>
                 </Box>
-                <Typography sx={{fontSize:'24px', fontWeight: 700}}>
-                Start your yoga program today!
+                <Typography sx={{ fontSize: '24px', fontWeight: 700 }}>
+                    Start your yoga program today!
                 </Typography>
             </Box>
         </>
     )
-}
+};
 
-export default Faq
+export default Faq;

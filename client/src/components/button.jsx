@@ -1,9 +1,6 @@
 import React from 'react';
-import {
-    Button,
-} from '@mui/material';
+import { Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { Typography } from '@mui/material';
 
 const StyledButton = styled(Button)(({ theme }) => ({
     backgroundColor: theme.palette.info.main,
@@ -40,9 +37,7 @@ const OrangeButton = ({ children, ...rest }) => (
         }}
         {...rest}
     >
-        <Typography>
-            {children}
-        </Typography>
+        {children}
     </StyledButton>
 );
 

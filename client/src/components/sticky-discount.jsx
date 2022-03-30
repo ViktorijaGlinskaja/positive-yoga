@@ -15,7 +15,7 @@ const StyledBar = styled(Toolbar)(({ theme }) => ({
     size: '15px',
     fontWeight: 600,
     height: '56px',
-}))
+}));
 
 const StickyDiscount = ({ children, ...rest }) => (
     <StyledBar {...rest}>

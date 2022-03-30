@@ -16,6 +16,6 @@ const PricingPlanBox = () => {
             {pricingInfo.map((plan, index) => <PricingPlan selected={isSelected === index} onClick={() => setIsSelected(index)} key={plan.id} title={plan.title} price={plan.price} oldPrice={plan.oldPrice} newPrice={plan.newPrice} frequency={plan.frequency} />)}
         </Box>
     )
-}
+};
 
 export default PricingPlanBox;

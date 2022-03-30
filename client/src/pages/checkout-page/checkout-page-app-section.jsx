@@ -1,7 +1,7 @@
-import React from 'react'
-import { Box } from '@mui/material'
-import ActivityApp from '../../components/assets/activity-app.png'
-import ArticleApp from '../../components/assets/articles-app.png'
+import React from 'react';
+import { Box } from '@mui/material';
+import ActivityApp from '../../components/assets/activity-app.png';
+import ArticleApp from '../../components/assets/articles-app.png';
 
 const AppSection = () => {
     return (
@@ -13,6 +13,6 @@ const AppSection = () => {
             <img style={{ position: 'absolute', right: '5%', top: '20%', height: '325.79px', width: '161.87px' }} alt="App" src={ArticleApp} />
         </Box>
     )
-}
+};
 
-export default AppSection
+export default AppSection;
