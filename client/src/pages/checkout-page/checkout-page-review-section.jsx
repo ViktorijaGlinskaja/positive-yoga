@@ -38,7 +38,7 @@ const ReviewSection = () => {
                 <Carousel sx={{ minHeight: '607px' }}>
                     {
                         reviews.map((person, index) =>
-                            <ReviewCard key={index} name={person.name} city={person.city} rating={person.rating} img={person.img} description={person.description} />)
+                            <ReviewCard key={index} name={person.name} city={person.city} rating={person.rating} img={person.img} description={person.description.replace('Positive Yoga','<b>Positive Yoga</b>')} />)
                     }
                 </Carousel>
             )}

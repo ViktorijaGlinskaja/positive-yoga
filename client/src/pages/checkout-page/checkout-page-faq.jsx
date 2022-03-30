@@ -18,8 +18,8 @@ const Faq = () => {
                 </Typography>
             </Box>
             <Box sx={{ display: 'grid', width: {xs:'343px', sm:'450px', md: '700px'}, margin:'auto' }}>
-                {questions.map((question) =>
-                    <FaqAccordion key={question.index} title={question.title} answer={question.answer} />
+                {questions.map((question, index) =>
+                    <FaqAccordion key={index} title={question.title} answer={question.answer} />
                 )}
                 <Box sx={{ margin: ' 40px auto' }}>
                     <OrangeButton> Get my plan</OrangeButton>

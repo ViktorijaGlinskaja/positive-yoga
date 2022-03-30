@@ -2,8 +2,8 @@ import React from 'react';
 import { Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const FaqAccordion = ({ index, title, answer }) => (
-    <Accordion key={index}>
+const FaqAccordion = ({ title, answer }) => (
+    <Accordion>
         <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
         >

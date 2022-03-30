@@ -7,7 +7,7 @@ const ReviewCard = ({ index, name, city, rating, img, description }) => (
         <p style={{ opacity: '0.64', fontSize: '12px', margin: 0 }}>{city}</p>
         <div style={{ margin: '16px 0px' }}>{rating}</div>
         {img}
-        <p>{description}</p>
+        <p dangerouslySetInnerHTML={{ __html: description }}></p>
     </Paper>
 );
 
