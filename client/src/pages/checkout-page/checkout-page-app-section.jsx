@@ -22,9 +22,9 @@ const AppSection = () => {
                     <path d="M375 0L0 200V433L375 233V0Z" fill="#EBEBEB" />
                 </svg>
             </Box>
-            <Box>
-                <img style={{ position: 'absolute', left: '2.5%', top: '10%', height: '325.79px', width: '161.87px' }} alt="App" src={ActivityApp} />
-                <img style={{ position: 'absolute', right: '2.5%', top: '20%', height: '325.79px', width: '161.87px' }} alt="App" src={ArticleApp} />
+            <Box sx={{margin: '24px 0px'}}>
+                <img style={{ position: 'absolute', left: '2.5%', top: '15%', height: '325.79px', width: '161.87px' }} alt="App" src={ActivityApp} />
+                <img style={{ position: 'absolute', right: '2.5%', top: '25%', height: '325.79px', width: '161.87px' }} alt="App" src={ArticleApp} />
             </Box>
         </Box>
     )

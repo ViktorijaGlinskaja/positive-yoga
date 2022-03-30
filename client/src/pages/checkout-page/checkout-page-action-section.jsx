@@ -6,8 +6,18 @@ import CheckCircle from '../../components/assets/check-circle-green.svg';
 
 const StyledTypography = styled(Typography)(() => ({
     fontSize: '20px',
-    margin: '24px 0px',
+    margin: '24px 24px',
     fontWeight: 700,
+}));
+
+const StyledBox = styled(Box)(({theme}) => ({
+    margin: '40px 0px',
+    [theme.breakpoints.up('sm')]: {
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        justifyContent: 'center',
+        gap: '24px',
+    },
 }));
 
 const ActionSection = () => {
@@ -20,19 +30,19 @@ const ActionSection = () => {
         'Extra attention to muscle, joint and back health'
     ]
     return (
-        <Box sx={{ margin: '40px 24px' }}>
+        <StyledBox>
+            <Box>
             <StyledTypography>
                 Is Positive Yoga right for me?
             </StyledTypography>
-            <Box>
                 {points.map((point, index) =>
-                    <div key={index} style={{ display: 'flex', marginBottom: '8px', alignItems: 'flex-start', width: '90%' }}>
+                    <div key={index} style={{ display: 'flex', margin: '8px 24px', alignItems: 'flex-start', width: '90%' }}>
                         <img alt='check' src={CheckCircle} />
                         <div style={{ fontSize: '14px', marginLeft: '16px' }}>{point}</div>
                     </div>)}
             </Box>
             <AppSection/>
-        </Box>
+        </StyledBox>
     )
 };
 
