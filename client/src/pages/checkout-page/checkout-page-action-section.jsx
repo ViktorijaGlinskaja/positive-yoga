@@ -1,7 +1,8 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import CheckCircle from '../../components/assets/check-circle-green.svg';
 import { styled } from '@mui/material/styles';
+import AppSection from './checkout-page-app-section';
+import CheckCircle from '../../components/assets/check-circle-green.svg';
 
 const StyledTypography = styled(Typography)(() => ({
     fontSize: '20px',
@@ -30,6 +31,7 @@ const ActionSection = () => {
                         <div style={{ fontSize: '14px', marginLeft: '16px' }}>{point}</div>
                     </div>)}
             </Box>
+            <AppSection/>
         </Box>
     )
 };
