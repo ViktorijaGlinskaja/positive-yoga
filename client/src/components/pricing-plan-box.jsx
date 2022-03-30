@@ -1,10 +1,9 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Box } from '@mui/material';
 import PricingPlan from './pricing-plan';
 
-const PricingPlanBox = () => {
-    const [isSelected, setIsSelected] = useState(null);
+const PricingPlanBox = ({ pricingPlan, setPricingPlan }) => {
 
     const pricingInfo = [
         { id: 1, title: '6 month plan', price: '$9.99', oldPrice: '$119.94', newPrice: '$59.94', frequency: 'billed every 6 months' },
@@ -13,7 +12,7 @@ const PricingPlanBox = () => {
     ]
     return (
         <Box sx={{ margin: '16px 0px', display: 'grid', gap: '8px' }} >
-            {pricingInfo.map((plan, index) => <PricingPlan selected={isSelected === index} onClick={() => setIsSelected(index)} key={plan.id} title={plan.title} price={plan.price} oldPrice={plan.oldPrice} newPrice={plan.newPrice} frequency={plan.frequency} />)}
+            {pricingInfo.map((plan, index) => <PricingPlan selected={pricingPlan === index} onClick={() => setPricingPlan(index)} key={plan.id} title={plan.title} price={plan.price} oldPrice={plan.oldPrice} newPrice={plan.newPrice} frequency={plan.frequency} />)}
         </Box>
     )
 };

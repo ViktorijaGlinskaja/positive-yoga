@@ -22,11 +22,11 @@ const StyledBox = styled(Box)(({ theme }) => ({
     },
 }))
 
-const PricingSection = () => (
+const PricingSection = ({ pricingPlan, setPricingPlan }) => (
     <StyledBox>
         <Box sx={{ maxWidth: '340px', margin: { xs: 'auto', sm: '0px 16px' } }}>
             <Typography sx={{ color: 'primary.main', display: 'inline', fontWeight: 700, fontSize: '20px' }}>Choose your plan and get <Typography sx={{ color: 'info.main', display: 'inline', fontWeight: 700, fontSize: '20px' }}>7 days free trial </Typography></Typography>
-            <PricingPlanBox />
+            <PricingPlanBox pricingPlan={pricingPlan} setPricingPlan={setPricingPlan} />
             <OrangeButton>
                 Get your plan
             </OrangeButton>

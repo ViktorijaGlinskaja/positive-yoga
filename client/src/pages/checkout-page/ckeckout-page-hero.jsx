@@ -18,14 +18,14 @@ const StyledBox = styled(Box)(({ theme }) => ({
 }))
 
 
-const HomePageHero = () => {
+const HomePageHero = ({pricingPlan, setPricingPlan}) => {
     return (
         <>
             <StyledBox>
                 <Typography sx={{ fontSize: '14px' }}>Over <strong>52 147</strong> plans ordered.</Typography>
                 <Typography sx={{ fontWeight: 800, fontSize: '28px', color: 'secondary.black' }}>Get access to your yoga program now!</Typography>
             </StyledBox>
-            <PricingSection />
+            <PricingSection pricingPlan={pricingPlan} setPricingPlan={setPricingPlan}/>
         </>
     )
 };
