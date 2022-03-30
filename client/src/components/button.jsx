@@ -7,7 +7,8 @@ const StyledButton = styled(Button)(({ theme }) => ({
     fontWeight: 700,
     letterSpacing: '-0.4px',
     textTransform: 'none',
-    width: '100%',
+    width: '343px',
+    maxWidth: '343px',
     '& .MuiTypography-root': {
         color: theme.palette.secondary.white,
     },
