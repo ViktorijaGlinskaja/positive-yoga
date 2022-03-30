@@ -1,14 +1,15 @@
-import React from 'react'
-import { Box, Typography } from '@mui/material'
-import SafeCheckoutImg from '../../components/assets/safe-checkout.png'
-import { styled } from '@mui/material/styles'
-import PlanIcon from '../../components/assets/plan-icon.svg'
-import ExerciseIcon from '../../components/assets/exercise-icon.svg'
-import ShoeIcon from '../../components/assets/shoe-icon.svg'
-import DietIcon from '../../components/assets/diet-icon.svg'
-import WhistleIcon from '../../components/assets/whistle-icon.svg'
-import SmartwatchIcon from '../../components/assets/smartwatch-icon.svg'
-import BookcheckIcon from '../../components/assets/bookcheck-icon.svg'
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+import SafeCheckoutImg from '../../components/assets/safe-checkout.png';
+import { styled } from '@mui/material/styles';
+import PlanIcon from '../../components/assets/plan-icon.svg';
+import ExerciseIcon from '../../components/assets/exercise-icon.svg';
+import ShoeIcon from '../../components/assets/shoe-icon.svg';
+import DietIcon from '../../components/assets/diet-icon.svg';
+import WhistleIcon from '../../components/assets/whistle-icon.svg';
+import SmartwatchIcon from '../../components/assets/smartwatch-icon.svg';
+import BookcheckIcon from '../../components/assets/bookcheck-icon.svg';
+import PricingSectionInfoList from '../../components/pricing-section-info-list';
 
 const StyledTypography = styled(Typography)(() => ({
     margin: '16px 0px',
@@ -41,23 +42,11 @@ const PricingSectionInfo = () => {
                     What's in my program?
                 </Typography>
                 {contentInfo.map((content) =>
-                    <Box component="div" key={content.id} sx={{ display: 'flex', margin: '10px 0px', alignItems: 'center' }}>
-                        <Box component="span">
-                            {content.icon}
-                        </Box>
-                        <Box sx={{ margin: '0px 16px' }}>
-                            <Box component="div" sx={{ fontSize: '15px', fontWeight: 600 }}>
-                                {content.title}
-                            </Box>
-                            <Box component="div" sx={{ fontSize: '12px', opacity: '0.64' }}>
-                                {content.description}
-                            </Box>
-                        </Box>
-                    </Box>
+                    <PricingSectionInfoList key={content.id} icon={content.icon} title={content.title} description={content.description} />
                 )}
             </Box>
         </>
     )
-}
+};
 
-export default PricingSectionInfo
+export default PricingSectionInfo;
