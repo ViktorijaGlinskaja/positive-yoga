@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@mui/material';
+import { Button, Chip } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -22,13 +22,25 @@ const StyledButton = styled(Button)(({ theme }) => ({
     }
 }));
 
-const PricingPlan = ({ title, price, oldPrice, newPrice, frequency, id, selected, ...rest }) => {
+const PricingPlan = ({ title, price, discount, oldPrice, newPrice, frequency, id, selected, ...rest }) => {
 
     return (
         <StyledButton key={id} {...rest}>
             <Box component="div"
                 sx={{ fontWeight: 600, fontSize: '20px', letterSpacing: '-0.4px' }}>
                 {title}
+                {discount ?
+                    <Chip label={discount}
+                        sx={{
+                            backgroundColor: 'secondary.yellow',
+                            margin: '0px 10px',
+                            fontSize: '12px',
+                            fontWeight: 700,
+                            borderRadius: '8px',
+                            width: '77px',
+                            height: '24px'
+                        }} />
+                    : null}
             </Box>
             <Box component="div">
                 <Box component="span"
@@ -62,7 +74,8 @@ const PricingPlan = ({ title, price, oldPrice, newPrice, frequency, id, selected
                     right: '0',
                 }}
             >
-                {selected ? <CheckCircleIcon sx={{ color: 'info.main' }} /> : <CircleIcon sx={{ color: 'rgba(0, 0, 0, 0.08)' }} />}
+                {selected ? <CheckCircleIcon sx={{ color: 'info.main' }} />
+                    : <CircleIcon sx={{ color: 'rgba(0, 0, 0, 0.08)' }} />}
             </IconButton>
         </StyledButton>
     )
