@@ -17,7 +17,7 @@ const Faq = () => {
                     Frequently Asked Questions
                 </Typography>
             </Box>
-            <Box sx={{ display: 'grid', margin: '0px 24px' }}>
+            <Box sx={{ display: 'grid', width:'343px', margin:'auto' }}>
                 {questions.map((question) =>
                     <FaqAccordion key={question.index} title={question.title} answer={question.answer} />
                 )}
