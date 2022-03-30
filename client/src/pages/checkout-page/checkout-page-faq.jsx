@@ -24,7 +24,7 @@ const Faq = () => {
                 <Box sx={{ margin: ' 40px auto' }}>
                     <OrangeButton> Get my plan</OrangeButton>
                 </Box>
-                <Typography sx={{ fontSize: '24px', fontWeight: 700 }}>
+                <Typography sx={{ fontSize: '24px', fontWeight: 700, marginBottom: '40px', textAlign: { sm: 'center' } }}>
                     Start your yoga program today!
                 </Typography>
             </Box>
