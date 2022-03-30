@@ -1,7 +1,5 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import SafeCheckoutImg from '../../components/assets/safe-checkout.png';
-import { styled } from '@mui/material/styles';
 import PlanIcon from '../../components/assets/plan-icon.svg';
 import ExerciseIcon from '../../components/assets/exercise-icon.svg';
 import ShoeIcon from '../../components/assets/shoe-icon.svg';
@@ -10,10 +8,23 @@ import WhistleIcon from '../../components/assets/whistle-icon.svg';
 import SmartwatchIcon from '../../components/assets/smartwatch-icon.svg';
 import BookcheckIcon from '../../components/assets/bookcheck-icon.svg';
 import PricingSectionInfoList from '../../components/pricing-section-info-list';
+import { styled } from '@mui/material/styles';
 
-const StyledTypography = styled(Typography)(() => ({
-    margin: '16px 0px',
-    fontSize: '12px',
+const StyledTypography = styled(Typography)(({ theme }) => ({
+    fontSize: '20px',
+    fontWeight: 700,
+    margin: '24px auto',
+    [theme.breakpoints.up('sm')]: {
+        margin: 0,
+    },
+}))
+
+const StyledBox = styled(Box)(({ theme }) => ({
+    maxWidth: '343px',
+    margin: '0px auto',
+    [theme.breakpoints.up('md')]: {
+        margin: 0,
+    },
 }))
 
 const PricingSectionInfo = () => {
@@ -28,23 +39,14 @@ const PricingSectionInfo = () => {
     ]
     return (
         <>
-            <Box sx={{ textAlign: 'center', alignItems: 'stretch', color: 'secondary.black' }}>
+            <StyledBox>
                 <StyledTypography>
-                    After 7 days free trial subscription payment is automatically charged from your account unless it is canceled at least 24 hours before the end of the trial period.
-                </StyledTypography>
-                <StyledTypography>
-                    By choosing a payment method you agree to the T&Cs and Privacy Policy
-                </StyledTypography>
-                <img alt="safe checkout" src={SafeCheckoutImg} />
-            </Box>
-            <Box>
-                <Typography sx={{ margin: '24px 0px', fontSize: '20px', fontWeight: 700 }}>
                     What's in my program?
-                </Typography>
+                </StyledTypography>
                 {contentInfo.map((content) =>
                     <PricingSectionInfoList key={content.id} icon={content.icon} title={content.title} description={content.description} />
                 )}
-            </Box>
+            </StyledBox>
         </>
     )
 };

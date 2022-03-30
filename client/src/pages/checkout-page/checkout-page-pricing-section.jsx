@@ -1,19 +1,47 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import { Typography } from '@mui/material';
+import SafeCheckoutImg from '../../components/assets/safe-checkout.png';
 import PricingPlanBox from '../../components/pricing-plan-box';
 import OrangeButton from '../../components/button';
 import PricingSectionInfo from './checkout-page-pricing-section-info';
+import { styled } from '@mui/material/styles';
+
+const StyledTypography = styled(Typography)(() => ({
+    margin: '16px 0px',
+    fontSize: '12px',
+}))
+
+const StyledBox = styled(Box)(({ theme }) => ({
+    margin: 'auto',
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '32px',
+    },
+}))
 
 const PricingSection = () => (
-    <Box sx={{ margin: '24px 24px' }}>
-        <Typography sx={{ color: 'primary.main', display: 'inline', fontWeight: 700, fontSize: '20px' }}>Choose your plan and get <Typography sx={{ color: 'info.main', display: 'inline', fontWeight: 700, fontSize: '20px' }}>7 days free trial </Typography></Typography>
-        <PricingPlanBox />
-        <OrangeButton>
-            Get your plan
-        </OrangeButton>
+    <StyledBox>
+        <Box sx={{ maxWidth: '340px', margin: { xs: 'auto', sm: '0px 16px' } }}>
+            <Typography sx={{ color: 'primary.main', display: 'inline', fontWeight: 700, fontSize: '20px' }}>Choose your plan and get <Typography sx={{ color: 'info.main', display: 'inline', fontWeight: 700, fontSize: '20px' }}>7 days free trial </Typography></Typography>
+            <PricingPlanBox />
+            <OrangeButton>
+                Get your plan
+            </OrangeButton>
+            <Box sx={{ textAlign: 'center', alignItems: 'stretch', color: 'secondary.black' }}>
+                <StyledTypography>
+                    After 7 days free trial subscription payment is automatically charged from your account unless it is canceled at least 24 hours before the end of the trial period.
+                </StyledTypography>
+                <StyledTypography>
+                    By choosing a payment method you agree to the T&Cs and Privacy Policy
+                </StyledTypography>
+                <img alt="safe checkout" src={SafeCheckoutImg} />
+            </Box>
+        </Box>
         <PricingSectionInfo />
-    </Box>
+    </StyledBox >
 );
 
 export default PricingSection;
