@@ -1,9 +1,9 @@
-import React from 'react'
-import { Box } from '@mui/material'
-import { Typography } from '@mui/material'
-import PricingPlanBox from '../../components/pricing-plan-box'
-import OrangeButton from '../../components/button'
-import PricingSectionInfo from './checkout-page-pricing-section-info'
+import React from 'react';
+import { Box } from '@mui/material';
+import { Typography } from '@mui/material';
+import PricingPlanBox from '../../components/pricing-plan-box';
+import OrangeButton from '../../components/button';
+import PricingSectionInfo from './checkout-page-pricing-section-info';
 
 const PricingSection = () => (
     <Box sx={{ margin: '24px 24px' }}>
@@ -14,6 +14,6 @@ const PricingSection = () => (
         </OrangeButton>
         <PricingSectionInfo />
     </Box>
-)
+);
 
-export default PricingSection
+export default PricingSection;

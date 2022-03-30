@@ -1,12 +1,12 @@
-import React from 'react'
-import LogoBar from '../../components/logo-bar'
-import StickyDiscount from '../../components/sticky-discount'
-import CheckoutPageHero from './ckeckout-page-hero'
-import ReviewSection from './checkout-page-review-section'
-import ActionSection from './checkout-page-action-section'
-import AppSection from './checkout-page-app-section'
-import Faq from './checkout-page-faq'
-import PricingSection from './checkout-page-pricing-section'
+import React from 'react';
+import LogoBar from '../../components/logo-bar';
+import StickyDiscount from '../../components/sticky-discount';
+import CheckoutPageHero from './ckeckout-page-hero';
+import ReviewSection from './checkout-page-review-section';
+import ActionSection from './checkout-page-action-section';
+import AppSection from './checkout-page-app-section';
+import Faq from './checkout-page-faq';
+import PricingSection from './checkout-page-pricing-section';
 
 const CheckoutPage = () => {
     return (
@@ -23,6 +23,6 @@ const CheckoutPage = () => {
             <PricingSection />
         </>
     )
-}
+};
 
-export default CheckoutPage
+export default CheckoutPage;

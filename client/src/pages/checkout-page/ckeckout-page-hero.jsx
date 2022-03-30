@@ -1,8 +1,8 @@
-import React from 'react'
-import { Box } from '@mui/material'
-import { Typography } from '@mui/material'
-import { styled } from '@mui/material/styles'
-import PricingSection from './checkout-page-pricing-section'
+import React from 'react';
+import { Box } from '@mui/material';
+import { Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import PricingSection from './checkout-page-pricing-section';
 
 const StyledBox = styled(Box)(({ theme }) => ({
     display: 'flex',
@@ -24,6 +24,6 @@ const HomePageHero = () => {
             <PricingSection/>
         </>
     )
-}
+};
 
-export default HomePageHero
+export default HomePageHero;

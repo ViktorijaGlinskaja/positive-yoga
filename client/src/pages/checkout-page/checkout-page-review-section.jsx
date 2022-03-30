@@ -1,11 +1,11 @@
-import React from 'react'
-import { Typography, Box, Paper } from '@mui/material'
-import Carousel from 'react-material-ui-carousel'
-import OrangeButton from '../../components/button'
-import FiveStars from '../../components/assets/five-stars-icon.svg'
-import Emily from '../../components/assets/emily.png'
-import Kylie from '../../components/assets/kylie.png'
-import Jesica from '../../components/assets/jesica.png'
+import React from 'react';
+import { Typography, Box, Paper } from '@mui/material';
+import Carousel from 'react-material-ui-carousel';
+import OrangeButton from '../../components/button';
+import FiveStars from '../../components/assets/five-stars-icon.svg';
+import Emily from '../../components/assets/emily.png';
+import Kylie from '../../components/assets/kylie.png';
+import Jesica from '../../components/assets/jesica.png';
 
 const ReviewSection = () => {
 
@@ -37,6 +37,6 @@ const ReviewSection = () => {
             </Box>
         </Box>
     )
-}
+};
 
-export default ReviewSection
+export default ReviewSection;
