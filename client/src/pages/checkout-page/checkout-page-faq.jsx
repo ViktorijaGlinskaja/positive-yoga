@@ -11,13 +11,13 @@ const Faq = () => {
         { title: "Why this program is paid?", answer: "We are aiming to offer our clients the best experience, which comes with a lot of work.  The entire yoga program is developed by our large team of experts that work long hours to prepare effective, trustworthy and enjoyable content and workouts that can help you to reach your goals. The program is also completely free of ads and is constantly being updated based on your feedback! " },
     ]
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', margin: 'auto', maxWidth: '700px' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', margin: 'auto' }}>
             <Box sx={{ color: 'secondary.black' }}>
                 <Typography sx={{ margin: '16px 24px', fontSize: '20px', fontWeight: 700, textAlign: { sm: 'center' } }}>
                     Frequently Asked Questions
                 </Typography>
             </Box>
-            <Box sx={{ display: 'grid', width:'343px', margin:'auto' }}>
+            <Box sx={{ display: 'grid', width: {xs:'343px', sm:'450px', md: '700px'}, margin:'auto' }}>
                 {questions.map((question) =>
                     <FaqAccordion key={question.index} title={question.title} answer={question.answer} />
                 )}
