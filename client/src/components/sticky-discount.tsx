@@ -1,10 +1,10 @@
 import React from 'react';
-import { Toolbar } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { Toolbar, ToolbarProps } from '@mui/material';
+import { styled } from '@mui/material';
 
 const StyledBar = styled(Toolbar)(({ theme }) => ({
-    backgroundColor: theme.palette.secondary.blue,
-    color: theme.palette.secondary.white,
+    backgroundColor: theme.palette.blue.main,
+    color: theme.palette.secondary.light,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -17,7 +17,7 @@ const StyledBar = styled(Toolbar)(({ theme }) => ({
     height: '56px',
 }));
 
-const StickyDiscount = ({ children, ...rest }) => (
+const StickyDiscount: React.FC<ToolbarProps> = ({ children, ...rest }) => (
     <StyledBar {...rest}>
         <div style={{ marginRight: '25px' }}>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

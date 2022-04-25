@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import OrangeButton from '../../components/button';
 import FaqAccordion from '../../components/accordion';
 
-const Faq = () => {
+const Faq: React.FC = () => {
     const questions = [
         { title: "What happens after I order?", answer: "After you place your order, we get to work! Based on the questions you answered in the quiz, we’ll craft your personal plan to your level with recomendations on how to improve. " },
         { title: "Where I can access my plan?", answer: "Your plan will be accessible in Positive Yoga's web app with a special link generated after your purchase." },
@@ -12,14 +12,14 @@ const Faq = () => {
     ]
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', margin: 'auto' }}>
-            <Box sx={{ color: 'secondary.black' }}>
+            <Box sx={{ color: 'secondary.dark' }}>
                 <Typography sx={{ margin: '16px 24px', fontSize: '20px', fontWeight: 700, textAlign: { sm: 'center' } }}>
                     Frequently Asked Questions
                 </Typography>
             </Box>
             <Box sx={{ display: 'grid', width: {xs:'343px', sm:'450px', md: '700px'}, margin:'auto' }}>
                 {questions.map((question, index) =>
-                    <FaqAccordion key={index} title={question.title} answer={question.answer} />
+                    <FaqAccordion key={index} title={question.title} answer={question.answer} children={''} />
                 )}
                 <Box sx={{ margin: ' 40px auto' }}>
                     <OrangeButton> Get my plan</OrangeButton>

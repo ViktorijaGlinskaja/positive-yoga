@@ -7,8 +7,8 @@ import ActionSection from './checkout-page-action-section';
 import Faq from './checkout-page-faq';
 import PricingSection from './checkout-page-pricing-section';
 
-const CheckoutPage = () => {
-    const [pricingPlan, setPricingPlan] = useState(null);
+const CheckoutPage: React.FC = () => {
+    const [pricingPlan, setPricingPlan] = useState<number>(0);
     return (
         <>
             <StickyDiscount>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Toolbar } from '@mui/material';
+import { Toolbar, ToolbarProps } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Logo from '../components/assets/logo.svg';
 
@@ -11,7 +11,7 @@ const StyledBar = styled(Toolbar)(() => ({
     size: '15px',
 }));
 
-const LogoBar = () => (
+const LogoBar: React.FC<ToolbarProps> = () => (
     <StyledBar >
         <img alt="logo" src={Logo} />
     </StyledBar>

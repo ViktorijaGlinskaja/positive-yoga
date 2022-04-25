@@ -1,7 +1,12 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import { Box, BoxProps } from '@mui/material';
 
-const PricingSectionInfoList = ({ id, icon, title, description }) => (
+type PricingSectionProps = BoxProps & {
+    icon: JSX.Element,
+    description: string,
+}
+
+const PricingSectionInfoList: React.FC<PricingSectionProps> = ({ id, icon, title, description }) => (
     <Box component="div" key={id} sx={{ display: 'flex', margin: '10px 0px', alignItems: 'center' }}>
         <Box component="span">
             {icon}

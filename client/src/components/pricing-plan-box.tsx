@@ -1,9 +1,14 @@
 
 import React from 'react';
-import { Box } from '@mui/material';
+import { Box, BoxProps } from '@mui/material';
 import PricingPlan from './pricing-plan';
 
-const PricingPlanBox = ({ pricingPlan, setPricingPlan }) => {
+type PricingPlanBoxProps = BoxProps & {
+    pricingPlan: number,
+    setPricingPlan: (index: number) => void,
+}
+
+const PricingPlanBox: React.FC<PricingPlanBoxProps> = ({ pricingPlan, setPricingPlan }) => {
 
     const pricingInfo = [
         { id: 1, title: '6 month plan', discount: 'Save 50%', price: '$9.99', oldPrice: '$119.94', newPrice: '$59.94', frequency: 'billed every 6 months' },

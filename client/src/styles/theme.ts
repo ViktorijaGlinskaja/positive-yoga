@@ -1,7 +1,6 @@
-import { createTheme } from '@mui/material';
+import { createTheme, ThemeOptions } from '@mui/material';
 import { responsiveFontSizes } from '@mui/material/styles';
 import { grey } from '@mui/material/colors';
-
 
 const theme = createTheme({
     typography: {
@@ -9,7 +8,7 @@ const theme = createTheme({
             '-apple-system',
             'BlinkMacSystemFont',
             'sans-serif',
-          ].join(','),
+        ].join(','),
         allVariants: {
             color: '#22222C',
         },
@@ -20,13 +19,16 @@ const theme = createTheme({
         },
         secondary: {
             main: '#2B6D96',
-            white: '#FFFFFF',
-            yellow: '#FFE082',
-            black: '#39353C',
-            grey: grey[800],
-            blue: '#90CAF9',
-            darkGrey: grey[900],
-            greyTransparent: 'rgbs(34, 34, 44, 0.64)',
+            light: '#FFFFFF',
+            contrastText: '#FFE082',
+            dark: '#39353C',
+        },
+        blue: {
+            main: '#90CAF9',
+        },
+        grey: {
+            main: grey[800],
+            secondary: grey[900]
         },
         info: {
             main: '#FF9B4E',
@@ -38,6 +40,6 @@ const theme = createTheme({
             height: '56px',
         }
     }
-});
+} as ThemeOptions);
 
 export default responsiveFontSizes(theme);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@mui/material';
+import { Button, ButtonProps } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const StyledButton = styled(Button)(({ theme }) => ({
@@ -10,26 +10,26 @@ const StyledButton = styled(Button)(({ theme }) => ({
     width: '343px',
     maxWidth: '343px',
     '& .MuiTypography-root': {
-        color: theme.palette.secondary.white,
+        color: theme.palette.secondary.light,
     },
     '&: hover': {
         '& .MuiTypography-root': {
             color: theme.palette.info.main,
         },
         border: `2px solid ${theme.palette.info.main}`,
-        backgroundColor: theme.palette.secondary.white,
+        backgroundColor: theme.palette.secondary.light,
         color: theme.palette.info.main,
     },
     '&: focus': {
         '& .MuiTypography-root': {
-            color: theme.palette.secondary.white,
+            color: theme.palette.secondary.light,
         },
         border: `2px solid ${theme.palette.primary.main}`,
         backgroundColor: theme.palette.primary.main,
     },
 }));
 
-const OrangeButton = ({ children, ...rest }) => (
+const OrangeButton: React.FC<ButtonProps> = ({ children, ...rest }) => (
     <StyledButton
         type="submit"
         variant="contained"

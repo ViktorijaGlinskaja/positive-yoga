@@ -10,8 +10,7 @@ const StyledTypography = styled(Typography)(() => ({
     fontWeight: 700,
 }));
 
-
-const AppSection = () => {
+const AppSection: React.FC = () => {
     return (
         <Box sx={{ position: 'relative', width: { sm: '343px' } }}>
             <StyledTypography>

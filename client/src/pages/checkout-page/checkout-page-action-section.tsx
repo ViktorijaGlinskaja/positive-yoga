@@ -20,7 +20,7 @@ const StyledBox = styled(Box)(({theme}) => ({
     },
 }));
 
-const ActionSection = () => {
+const ActionSection: React.FC = () => {
     const points = [
         'Each program adapts to your age or fitness level',
         'Mindful way to exercise and get real results',
